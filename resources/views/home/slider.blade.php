@@ -13,11 +13,10 @@
                         Kapor-Chopor
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                      Discover the best deals on your favorite products.
+                      Shop now for exclusive offers, top-notch quality, and a seamless shopping experience.
+                      ✨ Your one-stop shop for everything you love. ✨
                       </p>
-                      <a href="">
-                        Contact Us
-                      </a>
                     </div>
                   </div>
                   <div class="col-md-5 ">

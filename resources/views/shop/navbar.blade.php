@@ -11,16 +11,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav  ">
-            <li class="nav-item ">
-            <a class="nav-link" href="{{url('/home')}}">Home</a>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/home')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('/shop') }}">
+            <a class="nav-link" href="{{ url('/shop') }}">
                 Category
               </a>
             </li>
-           
-            
           </ul>
           <div class="user_option">
             <a href="{{url('/login')}}">

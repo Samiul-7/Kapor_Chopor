@@ -208,7 +208,7 @@
         </div>
       </div>
       <div class="btn-box">
-        <a href="">
+      <a class="nav-link" href="{{ url('/shop') }}">
           View All Products
         </a>
       </div>
