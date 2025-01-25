@@ -1,4 +1,9 @@
 <x-guest-layout>
+    <!-- Page Title -->
+    <div class="text-center mb-6">
+        <h1 class="text-3xl font-bold text-indigo-600">Welcome to Kapor Chopor</h1>
+    </div>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 

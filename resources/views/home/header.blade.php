@@ -22,21 +22,34 @@
            
             
           </ul>
+          
           <div class="user_option">
-            <a href="{{url('/login')}}">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
+            <!-- This ensures that after login user will not see the login and reg page -->
+            @if (Route::has('login')) 
+            @auth
+              <form method="POST" action="{{ route('logout') }}" style="display: inline-block; margin-right: 10px;">
+              @csrf
+              <input type="submit" value="Logout" class="btn btn-outline-danger">
+              </form>
+              <a href="{{ route('profile.edit') }}" class="btn btn-primary">
+                Profile
+              </a>
+            @else
+                <a href="{{url('/login')}}">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    Login
+                  </span>
+                </a>
 
-            <a href="{{url('/register')}}">
-              <i class="fa fa-vcard" aria-hidden="true"></i>
-              <span>
-                Register
-              </span>
-            </a>
-
+                <a href="{{url('/register')}}">
+                  <i class="fa fa-vcard" aria-hidden="true"></i>
+                  <span>
+                    Register
+                  </span>
+                </a>
+            @endauth
+            @endif
             <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>

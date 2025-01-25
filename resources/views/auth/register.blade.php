@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <div class="text-center mb-6">
+        <h1 class="text-3xl font-bold text-indigo-600">Welcome to Kapor Chopor</h1>
+    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

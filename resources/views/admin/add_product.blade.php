@@ -120,7 +120,7 @@
 
                         <div class="input_deg">
                             
-                            <input class="btn btn-success" type="submit" value="Add Producp">
+                            <input class="btn btn-success" type="submit" value="Add Product">
                         </div>
 
                     </form>
