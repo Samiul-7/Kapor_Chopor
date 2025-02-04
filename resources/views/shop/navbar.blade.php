@@ -50,14 +50,13 @@
                 </a>
             @endauth
             @endif
+            <a class="nav-link" href="{{ url('/shop') }}">
+            <i class="fa fa-search" aria-hidden="true"></i>
+              search
+            </a>
             <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
           </div>
         </div>
       </nav>

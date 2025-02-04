@@ -113,13 +113,11 @@
                             </select>
                         </div>
 
-                        <div class="input_deg">
-                            <label>Product image</label>
-                            <input type="file" name="image">
+                        <div class="form-group">
+                            <label for="image">Image URL</label>
+                            <input type="url" name="image" id="image" class="form-control" placeholder="Enter the image URL">
                         </div>
-
                         <div class="input_deg">
-                            
                             <input class="btn btn-success" type="submit" value="Add Product">
                         </div>
 

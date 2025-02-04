@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class AdminService
 {
-    /*
+    /**
      * Get all categories
      */
     public function getAllCategories()
@@ -16,7 +16,7 @@ class AdminService
         return Category::all();
     }
 
-    /*
+    /**
      * Add a new category
      */
     public function addCategory($categoryName)
@@ -26,7 +26,7 @@ class AdminService
         $category->save();
     }
 
-    /*
+    /**
      * Delete a category by ID
      */
     public function deleteCategory($id)
@@ -37,7 +37,7 @@ class AdminService
         }
     }
 
-    /*
+    /**
      * Get a category by ID
      */
     public function getCategoryById($id)
@@ -45,7 +45,7 @@ class AdminService
         return Category::find($id);
     }
 
-    /*
+    /**
      * Update category
      */
     public function updateCategory($id, $categoryName)
@@ -57,7 +57,7 @@ class AdminService
         }
     }
 
-    /*
+    /**
      * Get all categories for products
      */
     public function getCategoriesForProduct()
@@ -65,7 +65,7 @@ class AdminService
         return Category::all();
     }
 
-    /*
+    /**
      * Add a new product
      */
     public function addProduct(Request $request)
@@ -76,18 +76,11 @@ class AdminService
         $product->price = $request->price;
         $product->quantity = $request->qty;
         $product->catrgory = $request->category;
-
-        $image = $request->image;
-        if ($image) {
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move('products', $imageName);
-            $product->image = $imageName;
-        }
-
+        $product->image = $request->image; // Assuming URL is stored directly
         $product->save();
     }
 
-    /*
+    /**
      * Paginate products
      */
     public function getPaginatedProducts($perPage = 3)
@@ -95,7 +88,7 @@ class AdminService
         return Product::paginate($perPage);
     }
 
-    /*
+    /**
      * Delete a product by ID
      */
     public function deleteProduct($id)
@@ -110,7 +103,7 @@ class AdminService
         }
     }
 
-    /*
+    /**
      * Get product by ID
      */
     public function getProductById($id)
@@ -118,7 +111,7 @@ class AdminService
         return Product::find($id);
     }
 
-    /*
+    /**
      * Update a product
      */
     public function updateProduct(Request $request, $id)
@@ -130,19 +123,16 @@ class AdminService
             $product->price = $request->price;
             $product->quantity = $request->quantity;
             $product->catrgory = $request->category;
-
-            $image = $request->image;
-            if ($image) {
-                $imageName = time() . '.' . $image->getClientOriginalExtension();
-                $image->move('products', $imageName);
-                $product->image = $imageName;
+            
+            if ($request->image) {
+                $product->image = $request->image; // Assuming URL is stored directly
             }
 
             $product->save();
         }
     }
 
-    /*
+    /**
      * Search for products
      */
     public function searchProducts($searchTerm, $perPage = 3)
