@@ -72,14 +72,11 @@
                     </select>
                    
                 </div>
-                <div>
-                    <label >Current Image</label>
-                    <img width="150" src="/products/{{$data->image}}">
-                </div>
-                <div>
-                    <label for="">New Image</label>
-                    <input type="file"  name="image">
-                </div>
+                <div class="form-group">
+                            <label for="image">Image URL</label>
+                            <input type="url" name="image" id="image" class="form-control" placeholder="Enter the image URL">
+                        </div>
+                
                 <div>
                     <input class="btn btn-success" type="submit" value="Update Product">
                 </div>

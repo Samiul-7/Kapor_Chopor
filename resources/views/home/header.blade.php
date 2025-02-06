@@ -54,8 +54,9 @@
             <i class="fa fa-search" aria-hidden="true"></i>
               search
             </a>
-            <a href="">
+            <a href="{{url('mycart')}}">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              {{$count}}
             </a>
           </div>
         </div>
