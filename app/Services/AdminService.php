@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class AdminService
@@ -144,5 +145,9 @@ class AdminService
         }
 
         return Product::paginate($perPage);
+    }
+    public function getAllOrders()
+    {
+        return Order::all();
     }
 }

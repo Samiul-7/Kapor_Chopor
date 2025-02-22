@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\AdminService;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -90,5 +91,11 @@ class AdminController extends Controller
     {
         $product = $this->adminService->searchProducts($request->search);
         return view('admin.view_product', compact('product'));
+    }
+
+    public function view_orders()
+    {
+        $data = $this->adminService->getAllOrders();
+        return view('admin.order', compact('data'));
     }
 }
