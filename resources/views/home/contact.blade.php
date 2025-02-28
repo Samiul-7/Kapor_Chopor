@@ -10,11 +10,10 @@
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-5 px-0">
         <ul class="category-list">
-          <li>Men</li>
-          <li>Women</li>
+          <li>Men-Shirts</li>
+          <li>Women-Tops</li>
           <li>Kids</li>
-          <li>Accessories</li>
-          <li>Footwear</li>
+          <li>Shoes</li>
         </ul>
       </div>
     </div>
