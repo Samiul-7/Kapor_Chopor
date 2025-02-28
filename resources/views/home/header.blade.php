@@ -25,6 +25,20 @@
           
           <div class="user_option">
             <!-- This ensures that after login user will not see the login and reg page -->
+            <a class="nav-link" href="{{ url('/shop') }}">
+            <i class="fa fa-search" aria-hidden="true"></i>
+              search
+            </a>
+
+            <a href="{{url('myorders')}}">
+              My Orders
+            </a>
+
+            <a href="{{url('mycart')}}">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              {{$count}}
+            </a>
+            
             @if (Route::has('login')) 
             @auth
               <form method="POST" action="{{ route('logout') }}" style="display: inline-block; margin-right: 10px;">
@@ -50,14 +64,6 @@
                 </a>
             @endauth
             @endif
-            <a class="nav-link" href="{{ url('/shop') }}">
-            <i class="fa fa-search" aria-hidden="true"></i>
-              search
-            </a>
-            <a href="{{url('mycart')}}">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-              {{$count}}
-            </a>
           </div>
         </div>
       </nav>

@@ -20,6 +20,7 @@ use App\Http\Controllers\AdminController;
 route::get('/',[HomeController::class,'home']);
 
 route::get('/dashboard',[HomeController::class,'login_home'])->middleware(['auth', 'verified'])->name('dashboard');
+route::get('/myorders',[HomeController::class,'myorders'])->middleware(['auth', 'verified']);
 
 
 // Route::get('/dashboard', function () {
@@ -62,3 +63,5 @@ route::get('delete_cart/{id}',[HomeController::class,'delete_cart'])->middleware
 route::post('confirm_order',[HomeController::class,'confirm_order'])->middleware(['auth', 'verified']);
 
 route::get('view_orders',[AdminController::class,'view_orders'])->middleware(['auth','admin']);
+route::get('on_the_way/{id}',[AdminController::class,'on_the_way'])->middleware(['auth','admin']);
+route::get('delivered/{id}',[AdminController::class,'delivered'])->middleware(['auth','admin']);

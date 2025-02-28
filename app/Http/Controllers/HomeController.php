@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Services\HomeService;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\User;
+use App\Models\Cart;
+use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -78,5 +83,17 @@ class HomeController extends Controller
         toastr()->timeOut(10000)->closeButton()->addSuccess('Product Ordered Successfully');
     
         return redirect()->back();
+    }
+
+    public function myorders()
+    {
+        $user = Auth::user()->id;
+
+        $count = Cart::where('user_id', $user)->get()->count();
+
+        $order = Order::where('user_id',$user)->get();
+        
+        return view('home.order', compact('count','order'));
+        
     }
 }
