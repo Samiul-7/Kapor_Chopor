@@ -150,4 +150,16 @@ class AdminService
     {
         return Order::all();
     }
+
+    public function deleteOrder($id)
+    {
+        $order = Order::find($id);
+        if ($order) {
+            $imagePath = public_path('orders/' . $order->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+            $order->delete();
+        }
+    }
 }

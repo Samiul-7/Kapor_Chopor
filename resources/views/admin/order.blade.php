@@ -73,6 +73,9 @@
                             @else
                                 <a class="btn btn-primary" href="{{url('on_the_way',$data->id)}}">On the way</a>
                                 <a class="btn btn-success" href="{{url('delivered',$data->id)}}">Delivered</a>
+                                <break></break>
+                                <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_order',$data->id)}}">Delete</a>
+
                             @endif
                         </td>
                     </tr>

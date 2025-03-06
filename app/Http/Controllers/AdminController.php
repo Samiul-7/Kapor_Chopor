@@ -117,5 +117,12 @@ class AdminController extends Controller
     
         return redirect('/view_orders');
     }
+
+    public function delete_order($id)
+    {
+        $this->adminService->deleteOrder($id);
+        toastr()->timeOut(10000)->closeButton()->addSuccess('Order Deleted Successfully');
+        return redirect()->back();
+    }
     
 }
