@@ -65,3 +65,4 @@ route::post('confirm_order',[HomeController::class,'confirm_order'])->middleware
 route::get('view_orders',[AdminController::class,'view_orders'])->middleware(['auth','admin']);
 route::get('on_the_way/{id}',[AdminController::class,'on_the_way'])->middleware(['auth','admin']);
 route::get('delivered/{id}',[AdminController::class,'delivered'])->middleware(['auth','admin']);
+

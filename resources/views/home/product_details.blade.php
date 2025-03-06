@@ -29,6 +29,7 @@
                         </div>
                         <div class="detail-box">
                             <h6>{{$data->title}}</h6>
+                            <a class="btn btn-primary" href="{{url('add_cart',$data->id)}}">Add to Cart</a>
                         </div>
                         <div class="detail-box">
                             <h6>Category:{{$data->catrgory}}</h6>
@@ -41,10 +42,6 @@
         </div>
     </div>
 </section>
-
-
-
-
     <!-- Details part end-->
   @include('home.footer')
 </body>

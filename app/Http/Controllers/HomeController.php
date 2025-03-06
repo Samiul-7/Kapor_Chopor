@@ -21,9 +21,14 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+        $user=User::where('usertype','user')->get()->count();
+        $product=Product::all()->count();
+        $order=Order::all()->count();
+        $delivered=Order::where('status','Delivered')->get()->count();
+        $on_the_way=Order::where('status','On the way')->get()->count();
+        $prog=Order::where('status','in progress')->get()->count();
+        return view('admin.index',compact('user','product','order','delivered','on_the_way','prog'));
     }
-
     public function home()
     {
         $product = $this->homeService->getProductList();
