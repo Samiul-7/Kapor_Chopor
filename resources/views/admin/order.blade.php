@@ -4,11 +4,11 @@
     @include('admin.css')
     <style>
         table{
-            border: 2px solid skyblue;
+            border: 2px solid lightgreen;
             text-align: center;
         }    
         th{
-            background-color: skyblue;
+            background-color: lightgreen;
             padding: 10px;
             font-size: 18px;
             text-align: center;
@@ -16,7 +16,7 @@
         td{
             color:white;
             padding: 10px;
-            border: 1px solid skyblue;
+            border: 1px solid lightgreen;
         }
         .table_center{
             display:flex;
@@ -58,7 +58,7 @@
                         </td>
                         <td>
                             @if($data->status == 'in progress')
-                                <span style="color:red">{{$data->status}}</span>\
+                                <span style="color:red">{{$data->status}}</span>
                             @elseif($data->status == 'On the way')
                                 <span style="color:skyblue">{{$data->status}}</span>
                                 @else
@@ -66,8 +66,16 @@
                             @endif
                         </td>
                         <td>
-                            <a class="btn btn-primary" href="{{url('on_the_way',$data->id)}}">On the way</a>
-                            <a class="btn btn-success" href="{{url('delivered',$data->id)}}">Delivered</a>
+                            @if($data->status == 'Delivered')
+                                <p>Cant Change the status anymore</p>
+                                <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_order',$data->id)}}">Delete</a>
+                            @else
+                                <a class="btn btn-primary" href="{{url('on_the_way',$data->id)}}">On the way</a>
+                                <a class="btn btn-success" href="{{url('delivered',$data->id)}}">Delivered</a>
+                                <break></break>
+                                <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_order',$data->id)}}">Delete</a>
+
+                            @endif
                         </td>
                     </tr>
                     @endforeach

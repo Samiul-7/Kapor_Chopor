@@ -150,4 +150,41 @@ class AdminService
     {
         return Order::all();
     }
+
+    public function deleteOrder($id)
+    {
+        $order = Order::find($id);
+        if ($order) {
+            $imagePath = public_path('orders/' . $order->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+            $order->delete();
+        }
+    }
+    public function markOrderAsOnTheWay($orderId)
+    {
+        $order = Order::find($orderId);
+
+        if ($order) {
+            $order->status = 'On the way';
+            $order->save();
+            return true; // Indicates success
+        }
+
+        return false; // Order not found
+    }
+    
+    public function markOrderAsDelivered($orderId)
+    {
+        $order = Order::find($orderId);
+
+        if ($order) {
+            $order->status = 'Delivered';
+            $order->save();
+            return true; // Order updated successfully
+        }
+
+        return false; // Order not found
+    }
 }

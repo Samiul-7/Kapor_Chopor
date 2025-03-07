@@ -12,6 +12,7 @@
     <div class="page-content">
         <div class="page-header>">
             <div class="container-fluid"></div>
+            @include('admin.body')
         </div>
     </div>
 
