@@ -24,7 +24,7 @@ Project Features:
 
      USERS:
 
-          •     Multiuser Authentication
+          • Multiuser Authentication
           •	CRUD operations
           •	Search Functionality
           •	Add to cart
@@ -159,10 +159,10 @@ Setup Instruction:
 
      4.	Install Frontend Dependencies
 
-          npm install
-          npm run build
-          npm run dev
-          Lastly run “php artisan serve” to run the project
+               npm install
+               npm run build
+               npm run dev
+               Lastly run “php artisan serve” to run the project
 	
 
 
