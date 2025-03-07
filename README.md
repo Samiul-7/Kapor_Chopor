@@ -60,8 +60,8 @@ ________________________________________
           GET	     /dashboard	          Displays the user dashboard.
           GET	     /myorders	          Shows the user's orders.
           GET	     /profile	          Opens the profile edit page.
-          PATCH      /profile	          Updates the user profile.
-          DELETE     /profile	          Deletes the user profile.
+          PATCH          /profile	          Updates the user profile.
+          DELETE         /profile	          Deletes the user profile.
 ________________________________________
      Cart & Order Management
           These routes handle cart operations and order confirmation.
