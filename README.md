@@ -24,7 +24,7 @@ Project Features:
 
      USERS:
 
-          •	       Multiuser Authentication
+          •     Multiuser Authentication
           •	CRUD operations
           •	Search Functionality
           •	Add to cart
