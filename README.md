@@ -1,7 +1,9 @@
 # Kapor_Chopor
 
 Project OverView:
-     We are trying to build an online cloths and realted goods selling website.The title of our project is Kapor_Chopor.This website is supposed to make people's shopping life easier by bringing to couple of clicks.The target of the website are the general peoples.
+     We are creating an online store called Kapor_Chopor to sell clothes and related items. Our goal is to make shopping easy by allowing people to buy what they need with just a few clicks.
+     This website is for everyone who wants a simple and convenient way to shop from home. We will offer a variety of stylish and affordable clothes, along with a smooth shopping experience. 
+     Users will be able to search for products easily, make secure payments, and get fast delivery.With Kapor_Chopor, we want to connect buyers and sellers in one place, making online shopping easy, fun, and hassle-free.
 
 Tech Stack:
     
@@ -11,7 +13,7 @@ Tech Stack:
 
 Rendering Method:
     
-    Client-Side Rendering
+    Server-Side Rendering (SSR)
 
 UI Design:
 
