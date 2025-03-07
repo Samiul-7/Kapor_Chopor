@@ -18,16 +18,10 @@ class HomeController extends Controller
     {
         $this->homeService = $homeService;
     }
-
     public function index()
     {
-        $user=User::where('usertype','user')->get()->count();
-        $product=Product::all()->count();
-        $order=Order::all()->count();
-        $delivered=Order::where('status','Delivered')->get()->count();
-        $on_the_way=Order::where('status','On the way')->get()->count();
-        $prog=Order::where('status','in progress')->get()->count();
-        return view('admin.index',compact('user','product','order','delivered','on_the_way','prog'));
+        $stats = $this->homeService->getDashboardStats();
+        return view('admin.index', $stats);
     }
     public function home()
     {
@@ -90,15 +84,9 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function myorders()
+    public function myOrders()
     {
-        $user = Auth::user()->id;
-
-        $count = Cart::where('user_id', $user)->get()->count();
-
-        $order = Order::where('user_id',$user)->get();
-        
-        return view('home.order', compact('count','order'));
-        
+        $data = $this->homeService->getUserOrders();
+        return view('home.order', $data);
     }
 }

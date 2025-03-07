@@ -162,4 +162,29 @@ class AdminService
             $order->delete();
         }
     }
+    public function markOrderAsOnTheWay($orderId)
+    {
+        $order = Order::find($orderId);
+
+        if ($order) {
+            $order->status = 'On the way';
+            $order->save();
+            return true; // Indicates success
+        }
+
+        return false; // Order not found
+    }
+    
+    public function markOrderAsDelivered($orderId)
+    {
+        $order = Order::find($orderId);
+
+        if ($order) {
+            $order->status = 'Delivered';
+            $order->save();
+            return true; // Order updated successfully
+        }
+
+        return false; // Order not found
+    }
 }

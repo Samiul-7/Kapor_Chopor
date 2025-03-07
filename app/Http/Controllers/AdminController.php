@@ -101,21 +101,24 @@ class AdminController extends Controller
 
     public function on_the_way($id)
     {
-        $data = Order::find($id);
-    
-        $data->status = 'On the way';
-        $data->save();
-    
-        return redirect('/view_orders');
+        $updated = $this->adminService->markOrderAsOnTheWay($id);
+
+        if ($updated) {
+            return redirect('/view_orders')->with('success', 'Order status updated successfully.');
+        } else {
+            return redirect('/view_orders')->with('error', 'Order not found.');
+        }
     }
+    
     public function delivered($id)
     {
-        $data = Order::find($id);
-    
-        $data->status = 'Delivered';
-        $data->save();
-    
-        return redirect('/view_orders');
+        $updated = $this->adminService->markOrderAsDelivered($id);
+
+        if ($updated) {
+            return redirect('/view_orders')->with('success', 'Order marked as Delivered.');
+        } else {
+            return redirect('/view_orders')->with('error', 'Order not found.');
+        }
     }
 
     public function delete_order($id)
