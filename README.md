@@ -47,21 +47,21 @@ Api Endpoints:
 
           Method	Endpoint	               Description
 
-          GET	     /	                    Displays the home page.
-          GET	     /shop	               Shows all available products.
-          GET	     /product_details/{id}	Displays details of a product.
-          GET	     /searchProducts	     Searches for products.
+          GET	     /	                           Displays the home page.
+          GET	     /shop	                   Shows all available products.
+          GET	     /product_details/{id}	   Displays details of a product.
+          GET	     /searchProducts	           Searches for products.
 ________________________________________
      User Authentication & Profile Management
           These routes require authentication and allow users to manage their accounts.
 
           Method	Endpoint	          Description
 
-          GET	     /dashboard	     Displays the user dashboard.
+          GET	     /dashboard	          Displays the user dashboard.
           GET	     /myorders	          Shows the user's orders.
           GET	     /profile	          Opens the profile edit page.
-          PATCH     /profile	          Updates the user profile.
-          DELETE    /profile	          Deletes the user profile.
+          PATCH      /profile	          Updates the user profile.
+          DELETE     /profile	          Deletes the user profile.
 ________________________________________
      Cart & Order Management
           These routes handle cart operations and order confirmation.
@@ -69,8 +69,8 @@ ________________________________________
           Method	Endpoint	          Description
 
           GET	     add_cart/{id}	     Adds a product to the cart.
-          GET	     mycart	          Displays the user's cart.
-          GET	     delete_cart/{id}	Removes a product from the cart.
+          GET	     mycart	             Displays the user's cart.
+          GET	     delete_cart/{id}	     Removes a product from the cart.
           POST	     confirm_order	     Confirms the user's order.
 ________________________________________
      Admin-Specific Routes
@@ -82,9 +82,9 @@ ________________________________________
 
           GET	     view_category	          Displays all product categories.
           POST	     add_category	          Adds a new product category.
-          GET	     delete_category/{id}	Deletes a product category.
-          GET	     edit_category/{id}	     Opens category edit page.
-          POST	     update_category/{id}	Updates category details.
+          GET	     delete_category/{id}	  Deletes a product category.
+          GET	     edit_category/{id}	          Opens category edit page.
+          POST	     update_category/{id}	  Updates category details.
 ________________________________________
      Product Management
 
@@ -93,9 +93,9 @@ ________________________________________
           GET	     add_product	          Opens the product addition page.
           POST	     upload_product	          Uploads a new product.
           GET	     view_product	          Displays all products.
-          GET	     delete_product/{id}	     Deletes a product.
-          GET	     update_product/{id}	     Opens the product update page.
-          POST	     edit_product/{id}	     Updates product details.
+          GET	     delete_product/{id}	  Deletes a product.
+          GET	     update_product/{id}	  Opens the product update page.
+          POST	     edit_product/{id}	          Updates product details.
           GET	     product_search	          Searches for products (admin).     
 ________________________________________
      Order Management
@@ -103,9 +103,9 @@ ________________________________________
           Method	Endpoint	               Description
 
           GET	     view_orders	          Displays all orders (admin).
-          GET	     on_the_way/{id}	     Marks an order as "on the way".
+          GET	     on_the_way/{id}	          Marks an order as "on the way".
           GET	     delivered/{id}	          Marks an order as "delivered".
-          GET	     delete_order/{id}	     Deletes an order.
+          GET	     delete_order/{id}	          Deletes an order.
 ________________________________________
      Admin Dashboard
 
