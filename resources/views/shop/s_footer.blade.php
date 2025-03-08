@@ -7,15 +7,15 @@
             ABOUT US
           </h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+          We aim to redefine online shopping by offering a seamless, enjoyable experience with high-quality fashion at your fingertips. Our goal is to build a community of fashion lovers who appreciate both style and comfort.
           </p>
         </div>
         <div class="col-md-6 col-lg-4">
           <h6>
-            NEED HELP
+            NEED HELP?
           </h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+          We’re here to assist you! Whether you have questions about your order, need help with returns, or want to track your shipment, we’ve got you covered. Visit our FAQs for quick answers, or reach out to our customer support team for personalized assistance. Your satisfaction is our priority, and we’re committed to making your shopping experience smooth and hassle-free. Contact us anytime—we’re happy to help! 😊
           </p>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -29,7 +29,7 @@
             </a>
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>+0171*****89</span>
+              <span>+0171***89</span>
             </a>
             <a href="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -56,5 +56,6 @@
 
 <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
 <script src="{{asset('js/custom.js')}}"></script>

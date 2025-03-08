@@ -21,7 +21,7 @@
   <!-- end shop section -->
   <!-- info section -->
 
-  @include('shop.s_footer')
+  @include('home.footer')
 </body>
 
 </html>
